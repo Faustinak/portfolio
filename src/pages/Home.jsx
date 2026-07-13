@@ -647,7 +647,9 @@ export default function Portfolio() {
               LinkedIn
             </a>
             <a
-              href="#resume"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-3 rounded-xl font-medium text-white focus:outline-none focus-visible:ring-4"
               style={{ background: BLUE, "--tw-ring-color": BLUE }}
             >

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 /* Renders a real router Link for internal paths, a plain anchor (new tab)
    for external URLs, or a same-page hash anchor otherwise. */
 function NavItem({ href, className, children }) {
-  const isExternal = href.startsWith("http");
+  const isExternal = href.startsWith("http") || href.endsWith(".pdf");
   if (isExternal) {
     return (
       <a href={href} className={className} target="_blank" rel="noopener noreferrer">
@@ -75,7 +75,7 @@ const footerLinks = [
   { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/faustina-koduah/" },
-  { label: "Resume", href: "#resume" },
+  { label: "Resume", href: "/resume.pdf" },
 ];
 
 /* ---------- shared reveal-on-scroll hook ---------- */

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 /* Renders a real router Link for internal paths, a plain anchor (new tab)
    for external URLs, or a same-page hash anchor otherwise. */
 function NavItem({ href, className, children }) {
-  const isExternal = href.startsWith("http");
+  const isExternal = href.startsWith("http") || href.endsWith(".pdf");
   if (isExternal) {
     return (
       <a href={href} className={className} target="_blank" rel="noopener noreferrer">
@@ -533,7 +533,7 @@ function Footer() {
           <NavItem href="/about">About</NavItem>
           <NavItem href="/#contact">Contact</NavItem>
           <NavItem href="https://www.linkedin.com/in/faustina-koduah/">LinkedIn</NavItem>
-          <NavItem href="#resume">Resume</NavItem>
+          <NavItem href="/resume.pdf">Resume</NavItem>
         </nav>
         <p>Copyright &copy; 2026 FAUSTINA KODUAH . All Rights Reserved</p>
       </div>
