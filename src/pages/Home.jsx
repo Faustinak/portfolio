@@ -81,14 +81,14 @@ const projects = [
 
 const navLinks = [
   { label: "WORK", href: "#work" },
-  { label: "ABOUT", href: "#about" },
+  { label: "ABOUT", href: "/about" },
   { label: "PLAYGROUND", href: "/playground" },
 ];
 
 const footerLinks = [
   { label: "Home", href: "/" },
   { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "#contact" },
 ];
 
