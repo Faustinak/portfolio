@@ -31,12 +31,6 @@ jobs:
         run: npm ci
 
       - name: Build
-        # This sets the site's base path to match the interim GitHub Pages
-        # URL (username.github.io/repo-name/). Once faustinakoduah.com is
-        # connected and working, DELETE the "env:" block below (both lines)
-        # so it goes back to building for the custom domain's root path.
-        env:
-          VITE_BASE_PATH: /portfolio/
         run: npm run build
 
       - name: Upload build artifact
