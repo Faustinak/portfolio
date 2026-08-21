@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef, useState } from "react";
+import CursorTrail from "./CursorTrail";
 
 /* Renders a real router Link for internal paths, a plain anchor (new tab)
    for external URLs, or a same-page hash anchor otherwise. */
@@ -593,6 +594,7 @@ export default function CoStarPage() {
       `}</style>
 
       <CursorDot />
+      <CursorTrail />
 
       <header className="cs-header">
         <div className="cs-header-inner">

@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
+import CursorTrail from "./CursorTrail";
 import { Link } from "react-router-dom";
 
 const projectRoutes = {
@@ -422,6 +423,7 @@ export default function Portfolio() {
       `}</style>
 
       <CursorDot />
+      <CursorTrail />
 
       {/* Header */}
       <header className="sticky top-0 z-40 bg-white/90 backdrop-blur border-b" style={{ borderColor: BORDER }}>

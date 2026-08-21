@@ -1,5 +1,6 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
+import CursorTrail from "./CursorTrail";
 import { Link } from "react-router-dom";
 
 /* Renders a real router Link for internal paths, a plain anchor (new tab)
@@ -688,6 +689,7 @@ export default function PlaygroundPage() {
       `}</style>
 
       <CursorDot />
+      <CursorTrail />
 
       <header className="pg-header">
         <div className="pg-header-inner">
