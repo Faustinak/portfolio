@@ -391,88 +391,6 @@ function Research() {
 }
 
 /* ---------- section: The Solution (interactive) ---------- */
-const solutionFeatures = [
-  {
-    id: "library",
-    label: "Expanded Music Library",
-    description:
-      "Collaborate with Spotify to allow users to access and share their entire music libraries on Instagram.",
-    image: libraryPhones,
-    alt: "Four screens: Spotify's Your Library view, a playlist with a tap gesture on the share icon, the TuneFuse 'Sync Playlist to Instagram?' prompt, and the system dialog asking to open Instagram from Spotify",
-  },
-  {
-    id: "sharing",
-    label: "Customizable Music Sharing",
-    description:
-      'The app would offer easy user customization, including sharing options featuring "Recently Played," "Top Songs," and "Favorite Playlists."',
-    image: sharingPhones,
-    alt: "Four screens: Spotify search with Saved/Playlist tabs, a playlist list with a tap gesture, a favorite songs selection screen, and an Instagram story draft with the Desperado song sticker attached",
-  },
-];
-
-function SolutionSection() {
-  const [ref, visible] = useReveal();
-  const [activeId, setActiveId] = useState("library");
-  const active = solutionFeatures.find((f) => f.id === activeId);
-
-  return (
-    <section
-      ref={ref}
-      className={"solution-section reveal" + (visible ? " visible" : "")}
-    >
-      <div className="solution-section-inner">
-        <p className="eyebrow-label">The Solution</p>
-        <h2 className="mono-statement">
-          Collaboration with different music streamers is key
-        </h2>
-
-        <div
-          className="feature-toggle"
-          role="tablist"
-          aria-label="TuneFuse solution features"
-        >
-          {solutionFeatures.map((f) => (
-            <button
-              key={f.id}
-              type="button"
-              role="tab"
-              id={`tab-${f.id}`}
-              aria-selected={activeId === f.id}
-              aria-controls={`panel-${f.id}`}
-              className={
-                "feature-toggle-btn" + (activeId === f.id ? " active" : "")
-              }
-              onClick={() => setActiveId(f.id)}
-            >
-              {f.label}
-            </button>
-          ))}
-        </div>
-
-        <div className="feature-panel-wrap">
-          {solutionFeatures.map((f) => (
-            <div
-              key={f.id}
-              id={`panel-${f.id}`}
-              role="tabpanel"
-              aria-labelledby={`tab-${f.id}`}
-              aria-hidden={activeId !== f.id}
-              className={
-                "feature-panel" + (activeId === f.id ? " active" : "")
-              }
-            >
-              <p className="feature-description">{f.description}</p>
-              <div className="feature-phones">
-                <img src={f.image} alt={f.alt} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ---------- section: Stats (gauge + bar chart) ---------- */
 const statCards = [
   {
@@ -910,110 +828,7 @@ function FinalDesigns() {
   );
 }
 
-/* ---------- section: Low-Fi Wireframes (interactive, mirrors The Solution) ---------- */
-const wireframeSets = [
-  {
-    id: "spotify",
-    label: "Spotify:",
-    image: spotifyWireframes,
-    alt: "Low-fidelity wireframes of a Spotify-style Recently Played / Your Library screen, a track list screen, a playlist detail screen, and a full-bleed album art screen with two action buttons",
-  },
-  {
-    id: "instagram",
-    label: "Instagram:",
-    image: instagramWireframes,
-    alt: "Low-fidelity wireframes of an Instagram-style track list screen, a playlist screen, a story-editor screen with an attached song sticker, and a story sharing screen with 'Your story' and 'Close Friends' options",
-  },
-];
-
-function LowFiWireframes() {
-  const [ref, visible] = useReveal();
-  const [activeId, setActiveId] = useState("spotify");
-  const active = wireframeSets.find((w) => w.id === activeId);
-
-  return (
-    <section
-      ref={ref}
-      className={"lowfi-section reveal" + (visible ? " visible" : "")}
-    >
-      <div className="lowfi-inner">
-        <p className="eyebrow-label">Low-Fi Wireframes</p>
-        <h2 className="mono-statement">Design Ideas</h2>
-        <p className="feature-description">
-          I included fresh ideas into my design approach by staying aligned
-          with the research and feedback.
-        </p>
-
-        <div
-          className="feature-toggle"
-          role="tablist"
-          aria-label="Low-fi wireframe platform"
-        >
-          {wireframeSets.map((w) => (
-            <button
-              key={w.id}
-              type="button"
-              role="tab"
-              id={`wf-tab-${w.id}`}
-              aria-selected={activeId === w.id}
-              aria-controls={`wf-panel-${w.id}`}
-              className={
-                "feature-toggle-btn" + (activeId === w.id ? " active" : "")
-              }
-              onClick={() => setActiveId(w.id)}
-            >
-              {w.label}
-            </button>
-          ))}
-        </div>
-
-        <div className="feature-panel-wrap">
-          {wireframeSets.map((w) => (
-            <div
-              key={w.id}
-              id={`wf-panel-${w.id}`}
-              role="tabpanel"
-              aria-labelledby={`wf-tab-${w.id}`}
-              aria-hidden={activeId !== w.id}
-              className={
-                "feature-panel" + (activeId === w.id ? " active" : "")
-              }
-            >
-              <div className="feature-phones">
-                <img src={w.image} alt={w.alt} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ---------- section: Learnings + Takeaways ---------- */
-function Learnings() {
-  const [ref, visible] = useReveal();
-  return (
-    <section
-      ref={ref}
-      className={"learnings-section reveal" + (visible ? " visible" : "")}
-    >
-      <div className="learnings-inner">
-        <p className="eyebrow-label">Learnings + Takeaways</p>
-        <h2 className="mono-statement">Looking Ahead</h2>
-        <p className="feature-description">
-          While my initial approach focused on integrating Spotify,
-          broadening it to incorporate other major music streaming services
-          such as Apple Music, Pandora, and YouTube Music would result in a
-          more inclusive platform. This ensures that users who prefer other
-          providers are not left out and can easily share their individual
-          music interests.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 function OutcomeReflection() {
   const [ref, visible] = useReveal();
   return (
@@ -1498,7 +1313,6 @@ export default function TuneFusePage() {
         <Challenge />
         <ChallengeDiagram />
         <Research />
-        <SolutionSection />
         <StatsSection />
         <ResearchQuestions />
         <AffinityMapping />
@@ -1508,8 +1322,6 @@ export default function TuneFusePage() {
         <StoryboardPanels />
         <FinalDesignDecisions />
         <FinalDesigns />
-        <LowFiWireframes />
-        <Learnings />
         <OutcomeReflection />
       </main>
 
