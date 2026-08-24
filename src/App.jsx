@@ -7,6 +7,7 @@ const Playground = lazy(() => import("./pages/Playground.jsx"));
 const RamsHeal = lazy(() => import("./pages/RamsHeal.jsx"));
 const CoStarInternship = lazy(() => import("./pages/CoStarInternship.jsx"));
 const TuneFuse = lazy(() => import("./pages/TuneFuse.jsx"));
+const Resume = lazy(() => import("./pages/Resume.jsx"));
 
 /* On every route change: jump to top, unless the URL has a #hash,
    in which case scroll smoothly to that element (e.g. "/#work"). */
@@ -45,6 +46,9 @@ export default function App() {
           <Route path="/work/rams-heal" element={<RamsHeal />} />
           <Route path="/work/costar-internship" element={<CoStarInternship />} />
           <Route path="/work/tunefuse" element={<TuneFuse />} />
+          <Route path="/resume" element={<Resume />} />
+
+
         </Routes>
       </Suspense>
     </BrowserRouter>
