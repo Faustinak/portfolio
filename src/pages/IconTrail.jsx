@@ -36,7 +36,7 @@ export default function IconTrail() {
       <style>{`
         .icon-trail-arch {
           position: absolute;
-          top: -40px;
+          top: -60px;
           left: 50%;
           width: 640px;
           max-width: 90vw;
@@ -99,7 +99,7 @@ export default function IconTrail() {
 
         @media (max-width: 640px) {
           .icon-trail-arch {
-            top: -28px;
+            top: -40px;
             width: 320px;
             height: 90px;
           }
