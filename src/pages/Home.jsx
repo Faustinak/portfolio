@@ -249,7 +249,6 @@ function TypewriterHeroName() {
     "Product Designer",
     "UX/UI",
     "Creative Thinker",
-    "VCU Information Systems Alum",
     "Chai Lover",
   ];
 
