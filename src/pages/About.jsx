@@ -318,12 +318,10 @@ function Intro() {
     >
       <p className="eyebrow">ABOUT</p>
       <h1 className="intro-heading">
-        Faustina Koduah is a Graduate of
-        Information Systems
-        <br />
+        Faustina Koduah | Information Systems,{" "}
         <span className="vcu-wrap" tabIndex={0}>
           <span className="vcu-trigger" style={{ color: BLUE }}>
-            @Virginia Commonwealth University.
+            @Virginia Commonwealth University
           </span>
           <span className="gorams-popup" role="tooltip" aria-label="Go Rams!">
             <img src={goRamsImg} alt="Go Rams! VCU Ram mascot giving a thumbs up" />
